@@ -1,0 +1,26 @@
+Santa Search
+December 25, 12:00 AM
+
+You wake up to the sound of something metal falling in the kitchen. You wait, but nothing happens.
+You get out of bed, slowly, quietly, careful not to wake your parents.
+[[You sneak out of your room and into the hallway. -> intro2]]
+You step into the hallway and look down the hallway, both sides. All the lights are off. The door to your parents' room is slightly open.
+[[Make sure they're asleep. -> intro3]]
+You peek into your parents' room. They're sound asleep. They probably won't wake up for a while.
+[[Investigate the kitchen. -> intro4]]
+You go to the kitchen. You see the [[cookie tin you used the other day -> intro4a]] lying on the floor. It must have fallen on its own.
+
+Suddenly, a thought crosses your mind. [[Has Santa visited yet? -> intro5]]
+You and your parents made cookies for Santa together. It was amazing.
+
+[[You hope he likes them. -> intro4]]
+You rush into the living room, hurrying to check on the presents. On your way you notice a wet spot near the tree that wasn't there before. [[Maybe your dog had an accident? -> intro 5s]]
+All your presents are there, but unfortunately, you don't see any new ones or anything from Santa.
+But you've made up your mind.
+You are going to [[catch Santa. -> lrhub]]
+Wait, your dog hasn't had an accident in years, and anyway, the wet spot doesn't smell like anything. It's even cold to the touch. [[Almost like melted snow. -> intro5.1]]
+Double-click this passage to edit it.
+You rush into the living room, hurrying to check on the presents. On your way you notice a wet spot near the tree that wasn't there before. You think it might be melted snow, but you can't imagine how it got there.
+All your presents are there, but unfortunately, you don't see any new ones or anything from Santa.
+But you've made up your mind.
+You are going to [[catch Santa. -> lrhub]]
