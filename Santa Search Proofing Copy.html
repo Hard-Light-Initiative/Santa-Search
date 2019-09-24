@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0086)file:///C:/Users/rwharris/AppData/Local/Temp/012003e6-36f2-42b9-b28d-b470ceb3d54d.html -->
+<!-- saved from url=(0086)file:///C:/Users/rwharris/AppData/Local/Temp/c7cdd5b9-748a-459d-9e89-88c182536adb.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Santa Search
 </title>
@@ -206,7 +206,8 @@ function format() {
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Living Room" tags="Room" position="900,800" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if not _checkingPresents
 		and not _checkingFireplace
-		and not _checkingStockings&gt;&gt;
+		and not _checkingStockings
+		and not _checkingDoor&gt;&gt;
 			This is the Living Room.
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
@@ -237,12 +238,37 @@ function format() {
 [[Check Parents-&gt;Parents]]
 [[Check Closet-&gt;Closet]]
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Kitchen" tags="Room" position="1500,1200" size="100,100">This is the kitchen WHOO
-
-[[Check Fridge-&gt;Fridge]]
-[[Check Cookies and Milk-&gt;Cookies and Milk]]
-
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Fridge" tags="K" position="1400,1400" size="100,100">The fridge is decorated with your artwork and various family photos.
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Kitchen" tags="Room" position="1500,1200" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if not _checkingFridgeForSnack
+		and not _checkingFridgePhotos
+		and not _checkingCookies
+		and not _checkingPuddle&gt;&gt;
+			This is the Kitchen.
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if not _checkingFridgeForSnack&gt;&gt;
+		[[Get a snack-&gt;Snack]]		
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if not _checkingFridgePhotos&gt;&gt;
+		[[Look at the family photos on the fridge-&gt;Photos]]
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if not _checkingCookies&gt;&gt;
+		[[Check on the Cookies and Milk-&gt;Cookies and Milk]]
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if not _checkingPuddle&gt;&gt;
+		[[Check on the puddle-&gt;Puddle]]
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;display House-Map&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Fridge" tags="K" position="525,1500" size="100,100">The fridge is decorated with your artwork and various family photos.
 
 [[Get a snack]]
 
@@ -262,8 +288,8 @@ function format() {
 
 [[Check tin-&gt;tinthoughts]]
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="sleep" tags="" position="1300,200" size="100,100">You reason that if Santa is here, he would leave you something under the tree while you're asleep. Besides, you're tired. You climb into bed and [[drift off easy.-&gt;Ending #3]]</tw-passagedata><tw-passagedata pid="26" name="tinthoughts" tags="" position="2300,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Get a snack" tags="" position="1200,1500" size="100,100">You spend five minutes gorging yourself. You definitely do not regret this midnight snack.
-Once you're done, [[you feel as big as Santa.-&gt;Kitchen]]</tw-passagedata><tw-passagedata pid="28" name="Look closer" tags="" position="1800,1500" size="100,100">You see nothing out of the ordinary. You count the cookies, and there are as many as there were before.
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="sleep" tags="" position="1300,200" size="100,100">You reason that if Santa is here, he would leave you something under the tree while you're asleep. Besides, you're tired. You climb into bed and [[drift off easy.-&gt;Ending #3]]</tw-passagedata><tw-passagedata pid="26" name="tinthoughts" tags="" position="2300,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Get a snack" tags="" position="325,1600" size="100,100">You spend five minutes gorging yourself. You definitely do not regret this midnight snack.
+Once you're done, [[you feel as big as Santa.-&gt;Kitchen]]</tw-passagedata><tw-passagedata pid="28" name="Look closer" tags="" position="1500,1600" size="100,100">You see nothing out of the ordinary. You count the cookies, and there are as many as there were before.
 You decide to take one for yourself. [[Santa won't miss it.-&gt;Kitchen]]</tw-passagedata><tw-passagedata pid="29" name="Ending #3" tags="Ending" position="600,200" size="100,100">You wake up on Christmas day, and immediately rush to the tree to begin opening presents. You don't notice anything particularly magical, but your presents delight you nonetheless. You even got that toy you wanted so bad! This was a great Christmas.
 
 [[End]]</tw-passagedata><tw-passagedata pid="30" name="Wake them up" tags="" position="1600,600" size="100,100">You suddenly realize that you could be alone in the house with a stranger. What if it isn't Santa? What if it's a burglar, or worse? You panic and shake your parents awake.
@@ -391,7 +417,61 @@ You nod. That would help a lot.
 	&lt;&lt;display "Living Room"&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="37" name="Outside" tags="" position="1300,1200" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="37" name="Outside" tags="" position="1300,1200" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="Snack" tags="K" position="1200,1400" size="100,100">You open the fridge door and grab &lt;span id="Food"&gt;...&lt;/span&gt;
+&lt;span id="FoodChoice"&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;link "Food1"&gt;&gt;
+	&lt;&lt;replace "#Food"&gt;&gt;Food1&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;remove "#FoodChoice"&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;link "Food2"&gt;&gt;
+	&lt;&lt;replace "#Food"&gt;&gt;Food2&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;remove "#FoodChoice"&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;link "Food3"&gt;&gt;
+	&lt;&lt;replace "#Food"&gt;&gt;Food3&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;remove "#FoodChoice"&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;/span&gt;
+
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;display Kitchen&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Photos" tags="K" position="1400,1400" size="100,100">You look at the photos on the fridge and see &lt;span id="Action"&gt;...&lt;/span&gt;
+&lt;span id="ActionChoice"&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;link "Soccer"&gt;&gt;
+	&lt;&lt;replace "#Action"&gt;&gt;you playing soccer.&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;remove "#ActionChoice"&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;link "Drawings"&gt;&gt;
+	&lt;&lt;replace "#Action"&gt;&gt;some of your drawings you did in school before winter break.&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;remove "#ActionChoice"&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;link "Music"&gt;&gt;
+	&lt;&lt;replace "#Action"&gt;&gt;you playing with the music toys your parents got you for your birthday.&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;remove "#ActionChoice"&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;&lt;/span&gt;
+
+&lt;&lt;nobr&gt;&gt;
+&lt;span id="LookCloser"&gt;
+	&lt;&lt;link "Look Closer"&gt;&gt;
+		&lt;&lt;replace "#LookCloser"&gt;&gt;You see that in each picture your dad is wearing the same jacket. Huh, that's kinda funny!&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/link&gt;&gt;
+&lt;/span&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;display Kitchen&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Puddle" tags="K" position="1800,1400" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 
 
