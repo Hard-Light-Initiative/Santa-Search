@@ -114,53 +114,33 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 
 
 
-</script><tw-tag name="Ending" color="purple"></tw-tag>,<tw-tag name="IntroScene" color="gray"></tw-tag>,<tw-tag name="K" color="yellow"></tw-tag>,<tw-tag name="LR" color="red"></tw-tag>,<tw-tag name="PR" color="green"></tw-tag>,<tw-tag name="Room" color="blue"></tw-tag><tw-passagedata pid="1" name="Presents" tags="LR" position="1000,1000" size="100,100">&lt;&lt;nobr&gt;&gt;
-  &lt;&lt;set _checkingStockings = false&gt;&gt;
-  &lt;&lt;set _checkingFireplace = false&gt;&gt;
-  &lt;&lt;set _checkingPresents = true&gt;&gt;
-  &lt;&lt;set _checkingDoor = false&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-&lt;&lt;if !($choice == 0)&gt;&gt;
-	&lt;&lt;link &quot;Shake a Present&quot;&gt;&gt;
-		&lt;&lt;set $choice = 0&gt;&gt;
-		&lt;&lt;goto &quot;Shake&quot;&gt;&gt;
-	&lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-&lt;&lt;if !($choice == 1)&gt;&gt;
-	&lt;&lt;link &quot;Open a Present&quot;&gt;&gt;
-		&lt;&lt;set $choice = 1&gt;&gt;
-		&lt;&lt;goto &quot;Open&quot;&gt;&gt;
-	&lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-&lt;&lt;if !($choice == 2)&gt;&gt;
-	&lt;&lt;link &quot;Count the Presents&quot;&gt;&gt;
-		&lt;&lt;set $choice = 2&gt;&gt;
-		&lt;&lt;goto &quot;Count&quot;&gt;&gt;
-	&lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $choice = -1&gt;&gt;
 
-&lt;&lt;display &quot;Living Room&quot;&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="2" name="Fireplace" tags="LR" position="800,1000" size="100,100">&lt;&lt;nobr&gt;&gt;
-  &lt;&lt;set _checkingStockings = false&gt;&gt;
-  &lt;&lt;set _checkingFireplace = true&gt;&gt;
-  &lt;&lt;set _checkingPresents = false&gt;&gt;
-  &lt;&lt;set _checkingDoor = false&gt;&gt;
+</script><tw-tag name="Ending" color="purple"></tw-tag>,<tw-tag name="IntroScene" color="gray"></tw-tag>,<tw-tag name="K" color="yellow"></tw-tag>,<tw-tag name="LR" color="red"></tw-tag>,<tw-tag name="PR" color="green"></tw-tag>,<tw-tag name="Room" color="blue"></tw-tag><tw-passagedata pid="1" name="Presents" tags="LR" position="1000,1000" size="100,100">&lt;span id=&quot;DisplayText&quot;&gt;
+&lt;&lt;link &quot;Shake a Present&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
+		&lt;&lt;display &quot;Shake&quot;&gt;&gt;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Open a Present&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
+		&lt;&lt;display &quot;Open&quot;&gt;&gt;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Count the Presents&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
+		&lt;&lt;display &quot;Count&quot;&gt;&gt;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/span&gt;
 
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Fireplace" tags="LR" position="800,1000" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if !(visited() &gt; 1) and !$santaHasLeftTheBuilding&gt;&gt; 
 		Looking closer at the fireplace, you see large boot prints in the ash. Santa MUST HAVE come down the chimney, just as he&#39;s supposed to and left these bootprints.
 	&lt;&lt;elseif !(visited() &gt; 1) and $santaHasLeftTheBuilding&gt;&gt;
@@ -171,7 +151,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		In addition to the first set of bootprints you saw earlier, you see another set of bootprints going in the opposite direction. Santa must have left already.
 	&lt;&lt;/if&gt;&gt;
 	&lt;&lt;set $foundFireplaceFootprints = true&gt;&gt;
-	&lt;&lt;display &quot;Living Room&quot;&gt;&gt;
+	&lt;&lt;return&gt;&gt;
 
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Ending#2" tags="Ending" position="400,200" size="100,100">You met Santa and had a wonderful Christmas.
 [[End]]</tw-passagedata><tw-passagedata pid="4" name="Ending #1" tags="Ending" position="200,200" size="100,100">You didn&#39;t meet Santa but you did find evidence of the jolly old man. Also, there were many new nice presents under the Christmas Tree this year.
@@ -259,7 +239,7 @@ function format() {
 
 //ready();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Living Room" tags="Room" position="900,800" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Living Room" tags="Room" position="903.3333333333333,801.6666666666666" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if not _checkingPresents
 		and not _checkingFireplace
 		and not _checkingStockings
@@ -294,41 +274,13 @@ function format() {
 [[Check Parents-&gt;Parents]]
 [[Check Closet-&gt;Closet]]
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Kitchen" tags="Room" position="1500,1200" size="100,100">&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;if not _checkingFridgeForSnack
-		and not _checkingFridgePhotos
-		and not _checkingCookies
-		and not _checkingPuddle&gt;&gt;
-			This is the Kitchen.
-	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;if not _checkingFridgeForSnack&gt;&gt;
-		[[Get a snack-&gt;Snack]]		
-	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;if not _checkingFridgePhotos&gt;&gt;
-		[[Look at the family photos on the fridge-&gt;Photos]]
-	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;if not _checkingCookies&gt;&gt;
-		[[Check on the Cookies and Milk-&gt;Cookies and Milk]]
-	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;if not _checkingPuddle&gt;&gt;
-		[[Check on the puddle-&gt;Puddle]]
-	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;display House-Map&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Fridge" tags="K" position="525,1500" size="100,100">The fridge is decorated with your artwork and various family photos.
-
-[[Get a snack]]
-
-[[Go Back-&gt;Kitchen]] </tw-passagedata><tw-passagedata pid="20" name="Cookies and Milk" tags="K" position="1600,1400" size="100,100">These are the cookies and milk you left out for Santa.
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Kitchen" tags="Room" position="1500,1200" size="100,100">This is the kitchen.
+[[Get a snack-&gt;Snack]]		
+[[Look at the family photos on the fridge-&gt;Photos]]
+[[Check on the Cookies and Milk-&gt;Cookies and Milk]]
+&lt;&lt;if !$puddleCleaned&gt;&gt;[[Check on the puddle-&gt;Puddle]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;display House-Map&gt;&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Cookies and Milk" tags="K" position="1600,1400" size="100,100">These are the cookies and milk you left out for Santa.
 
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;CookieStatus&quot;&gt;
@@ -339,29 +291,26 @@ function format() {
 &lt;&lt;/if&gt;&gt;
 &lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="21" name="Parents" tags="PR" position="1700,400" size="100,100">Your parents are still sound asleep.
+&lt;&lt;return&gt;&gt;
+</tw-passagedata><tw-passagedata pid="20" name="Parents" tags="PR" position="1700,400" size="100,100">Your parents are still sound asleep.
 [[Wake them up]]
 
-[[Go Back-&gt;Parents&#39; Bedroom]] </tw-passagedata><tw-passagedata pid="22" name="Closet" tags="PR" position="1900,400" size="100,100">The closet is full of your parents&#39; clothes.
+[[Go Back-&gt;Parents&#39; Bedroom]] </tw-passagedata><tw-passagedata pid="21" name="Closet" tags="PR" position="1900,400" size="100,100">The closet is full of your parents&#39; clothes.
 
-[[Go Back-&gt;Parents&#39; Bedroom]]</tw-passagedata><tw-passagedata pid="23" name="Your Room" tags="Room" position="1400,0" size="100,100">Santa&#39;s not in your room. That would be weird.
+[[Go Back-&gt;Parents&#39; Bedroom]]</tw-passagedata><tw-passagedata pid="22" name="Your Room" tags="Room" position="1400,0" size="100,100">Santa&#39;s not in your room. That would be weird.
 
 [[Go to bed-&gt;sleep]]
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Dining Room" tags="Room" position="2200,100" size="100,100">Yum food
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Dining Room" tags="Room" position="2200,100" size="100,100">Yum food
 
-[[Check tin-&gt;tinthoughts]]
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="sleep" tags="" position="1300,200" size="100,100">You reason that if Santa is here, he would leave you something under the tree while you&#39;re asleep. Besides, you&#39;re tired. You climb into bed and [[drift off easy.-&gt;Ending #3]]</tw-passagedata><tw-passagedata pid="25" name="Ending #3" tags="Ending" position="600,200" size="100,100">You wake up on Christmas day, and immediately rush to the tree to begin opening presents. You don&#39;t notice anything particularly magical, but your presents delight you nonetheless. You even got that toy you wanted so bad! This was a great Christmas.
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="sleep" tags="" position="1300,200" size="100,100">You reason that if Santa is here, he would leave you something under the tree while you&#39;re asleep. Besides, you&#39;re tired. You climb into bed and [[drift off easy.-&gt;Ending #3]]</tw-passagedata><tw-passagedata pid="26" name="tinthoughts" tags="" position="2300,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Get a snack" tags="" position="325,1600" size="100,100">You spend five minutes gorging yourself. You definitely do not regret this midnight snack.
-Once you&#39;re done, [[you feel as big as Santa.-&gt;Kitchen]]</tw-passagedata><tw-passagedata pid="28" name="Look closer" tags="" position="1193.3333333333333,1605" size="100,100">You see nothing out of the ordinary. You count the cookies, and there are as many as there were before.
-You decide to take one for yourself. [[Santa won&#39;t miss it.-&gt;Kitchen]]</tw-passagedata><tw-passagedata pid="29" name="Ending #3" tags="Ending" position="600,200" size="100,100">You wake up on Christmas day, and immediately rush to the tree to begin opening presents. You don&#39;t notice anything particularly magical, but your presents delight you nonetheless. You even got that toy you wanted so bad! This was a great Christmas.
-
-[[End]]</tw-passagedata><tw-passagedata pid="30" name="Wake them up" tags="" position="1600,600" size="100,100">You suddenly realize that you could be alone in the house with a stranger. What if it isn&#39;t Santa? What if it&#39;s a burglar, or worse? You panic and shake your parents awake.
+[[End]]</tw-passagedata><tw-passagedata pid="26" name="Wake them up" tags="" position="1600,600" size="100,100">You suddenly realize that you could be alone in the house with a stranger. What if it isn&#39;t Santa? What if it&#39;s a burglar, or worse? You panic and shake your parents awake.
 They ask you what&#39;s wrong and why you woke them up.
 You tell them that you think there&#39;s someone in the house, and you can&#39;t sleep, and can they please check the house?
 One gives you a tight hug and helps you calm down, while the other checks the house. They come back and tell you that there&#39;s no one in the house, but you can sleep with them if it makes you feel safe.
 You nod. That would help a lot.
-[[You fall asleep in the warm embrace of your parents.-&gt;Ending #3]]</tw-passagedata><tw-passagedata pid="31" name="Variables" tags="" position="3000,120" size="100,100">&lt;&lt;set $santaHasLeftTheBuilding = false&gt;&gt;
+[[You fall asleep in the warm embrace of your parents.-&gt;Ending #3]]</tw-passagedata><tw-passagedata pid="27" name="Variables" tags="" position="3000,120" size="100,100">&lt;&lt;set $santaHasLeftTheBuilding = false&gt;&gt;
 
 /* Time Keeping Variables */
 &lt;&lt;set $overallTimePassed = 0&gt;&gt;
@@ -398,32 +347,33 @@ You nod. That would help a lot.
 &lt;&lt;set $playerHasKey = false&gt;&gt;
 &lt;&lt;set $playerCheckedDoor = false&gt;&gt; 			/*Living Room*/
 &lt;&lt;set $dadsFavoriteJacketKnown = false&gt;&gt; 	/*Kitchen*/
-&lt;&lt;set $jacketChances = 0&gt;&gt; 					/*Parents&#39; Bedroom*/</tw-passagedata><tw-passagedata pid="32" name="Stockings" tags="LR" position="600,1000" size="100,100">&lt;&lt;nobr&gt;&gt;
-  &lt;&lt;set _checkingStockings = true&gt;&gt;
-  &lt;&lt;set _checkingFireplace = false&gt;&gt;
-  &lt;&lt;set _checkingPresents = false&gt;&gt;
-  &lt;&lt;set _checkingDoor = false&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;if $chairMoved&gt;&gt;
-		You stand on a chair to get a better look into the stockings.
-		&lt;&lt;if $stockingsFilled&gt;&gt;
-			&lt;&lt;set $foundStockingsFilled = true&gt;&gt;
-			The stockings have been filled! Santa MUST be here!
-		&lt;&lt;else&gt;&gt;
-			The stockings have not been filled yet.
-		&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $jacketChances = 0&gt;&gt; 					/*Parents&#39; Bedroom*/</tw-passagedata><tw-passagedata pid="28" name="Stockings" tags="LR" position="600,1000" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;span id=&quot;DisplayText&quot;&gt;
+&lt;&lt;if $chairMoved&gt;&gt;
+	You stand on a chair to get a better look into the stockings.
+	&lt;&lt;if $stockingsFilled&gt;&gt;
+		&lt;&lt;set $foundStockingsFilled = true&gt;&gt;
+		The stockings have been filled! Santa MUST be here!
 	&lt;&lt;else&gt;&gt;
-		The stockings are too high for you to see into. 
-		&lt;&lt;link &quot;You move a chair to get up higher.&quot;&gt;&gt;
-			&lt;&lt;set $chairMoved = true&gt;&gt;
-			&lt;&lt;goto &#96;passage()&#96;&gt;&gt;
-		&lt;&lt;/link&gt;&gt;
+		The stockings have not been filled yet.
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;display &quot;Living Room&quot;&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Shake" tags="" position="900,1200" size="100,100">You pick up one of the presents and shake it. 
+&lt;&lt;else&gt;&gt;
+	The stockings are too high for you to see into. 
+	&lt;&lt;link &quot;You move a chair to get up higher.&quot;&gt;&gt;
+		&lt;&lt;set $chairMoved = true&gt;&gt;
+		&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
+				You stand on a chair to get a better look into the stockings.
+	&lt;&lt;if $stockingsFilled&gt;&gt;
+		&lt;&lt;set $foundStockingsFilled = true&gt;&gt;
+		The stockings have been filled! Santa MUST be here!
+	&lt;&lt;else&gt;&gt;
+		The stockings have not been filled yet.
+	&lt;&lt;/if&gt;&gt;
+		&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;/span&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Shake" tags="" position="893.3333333333334,1200" size="100,100">You pick up one of the presents and shake it. 
 &lt;&lt;switch random(1,3)&gt;&gt;
 	&lt;&lt;case 1&gt;&gt;
 		It doesn&#39;t make much noise. Probably socks. Ugh. 
@@ -431,9 +381,7 @@ You nod. That would help a lot.
 		The box jingles a bit. Probably a new toy!
 	&lt;&lt;case 3&gt;&gt;
 		The box is small and thin. It looks like it might be a new video game!
-&lt;&lt;/switch&gt;&gt;
-	
-&lt;&lt;display &quot;Presents&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Open" tags="" position="1000,1200" size="100,100">You pick up one of the presents and open it. 
+&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Open" tags="" position="996.6666666666666,1200" size="100,100">You pick up one of the presents and open it. 
 &lt;&lt;switch random(1,3)&gt;&gt;
 	&lt;&lt;case 1&gt;&gt;
 		Oh man they&#39;re just socks. 
@@ -441,9 +389,7 @@ You nod. That would help a lot.
 		Hey its a new toy! YAY!
 	&lt;&lt;case 3&gt;&gt;
 		Oh cool its a new video game! I can&#39;t wait to play this!
-	&lt;&lt;/switch&gt;&gt;
-
-&lt;&lt;display &quot;Presents&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Count" tags="" position="1100,1200" size="100,100">&lt;&lt;if $newPresentsPlaced&gt;&gt;
+	&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Count" tags="" position="1100,1200" size="100,100">&lt;&lt;if $newPresentsPlaced&gt;&gt;
 	&lt;&lt;if !$foundNewPresentsPlaced&gt;&gt;
 		&lt;&lt;set $foundNewPresentsPlaced = true&gt;&gt;
 		After taking some time to count all of the presents addressed to you, you find that there are three new presents to you under the tree, all from Santa. He must&#39;ve just placed these here.
@@ -452,36 +398,32 @@ You nod. That would help a lot.
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
 	After taking some time to count all of the presents addressed to you, you find that there are not any new presents to you under the tree. Maybe Santa just hasn&#39;t gotten to place them yet?
-&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;display &quot;Presents&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Door" tags="LR" position="1200,1000" size="100,100">&lt;&lt;nobr&gt;&gt;
-  &lt;&lt;set _checkingStockings = false&gt;&gt;
-  &lt;&lt;set _checkingFireplace = false&gt;&gt;
-  &lt;&lt;set _checkingPresents = false&gt;&gt;
-  &lt;&lt;set _checkingDoor = true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Door" tags="LR" position="1200,1000" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $playerHasKey&gt;&gt;
-		The door unlocks.
-		[[Go Outside-&gt;Outside]]
+	The door unlocks.
+	[[Go Outside-&gt;Outside]]
 &lt;&lt;else&gt;&gt;
 	&lt;&lt;set $playerCheckedDoor = true&gt;&gt;
+	&lt;span id=&quot;DisplayText&quot;&gt;
 	The door is locked.
 	&lt;&lt;if !$playerCheckedKeyHanger&gt;&gt;
 		&lt;&lt;link &quot;Check the key hanger for the keys&quot;&gt;&gt;
 			&lt;&lt;set $playerCheckedKeyHanger = true&gt;&gt;
-			&lt;&lt;goto &#96;passage()&#96;&gt;&gt;
+			&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
+				The door is locked. The keys aren&#39;t hanging where they are supposed to be. Maybe dad left them in his jacket pockets like he always does.
+			&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;/link&gt;&gt;
-	&lt;&lt;else&gt;&gt;
-		The keys aren&#39;t hanging where they are supposed to be. Maybe dad left them in his jacket pockets like he always does.
+	&lt;&lt;else&gt;&gt;	
+		 The keys aren&#39;t hanging where they are supposed to be. Maybe dad left them in his jacket pockets like he always does.
 	&lt;&lt;/if&gt;&gt;
+	&lt;/span&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
-	&lt;&lt;display &quot;Living Room&quot;&gt;&gt;
+	&lt;&lt;return&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="37" name="Outside" tags="" position="1300,1200" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="Snack" tags="K" position="1200,1400" size="100,100">You open the fridge door and grab &lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
+</tw-passagedata><tw-passagedata pid="33" name="Outside" tags="" position="1300,1200" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="34" name="Snack" tags="K" position="1200,1400" size="100,100">You open the fridge door and grab &lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
 &lt;span id=&quot;FoodChoice&quot;&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Food1&quot;&gt;&gt;
@@ -502,10 +444,7 @@ You nod. That would help a lot.
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;/span&gt;
-
-&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;display Kitchen&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Photos" tags="K" position="1400,1400" size="100,100">You look at the photos on the fridge and see &lt;span id=&quot;Action&quot;&gt;...&lt;/span&gt;
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Photos" tags="K" position="1400,1400" size="100,100">You look at the photos on the fridge and see &lt;span id=&quot;Action&quot;&gt;...&lt;/span&gt;
 &lt;span id=&quot;ActionChoice&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Soccer&quot;&gt;&gt;
 	&lt;&lt;replace &quot;#Action&quot;&gt;&gt;you playing soccer.&lt;&lt;/replace&gt;&gt;
@@ -524,18 +463,53 @@ You nod. That would help a lot.
 	&lt;&lt;remove &quot;#ActionChoice&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;&lt;/span&gt;
-
 &lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $dadsFavoriteJacketKnown&gt;&gt;
+	Your dad is wearing the same jacket in every picture.
+&lt;&lt;else&gt;&gt;
 &lt;span id=&quot;LookCloser&quot;&gt;
 	&lt;&lt;link &quot;Look Closer&quot;&gt;&gt;
+		&lt;&lt;set $dadsFavoriteJacketKnown = true&gt;&gt;
 		&lt;&lt;replace &quot;#LookCloser&quot;&gt;&gt;You see that in each picture your dad is wearing the same jacket. Huh, that&#39;s kinda funny!&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/link&gt;&gt;
 &lt;/span&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Puddle" tags="K" position="1800,1400" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;span id=DisplayText&gt;
+&lt;&lt;if $foundWaterPuddle&gt;&gt;
+	The puddle on the ground appears to be water, like that from melted snow.
+&lt;&lt;else&gt;&gt;
+	It looks like your dog peed itself on the kitchen floor. Gross. &lt;&lt;link &quot;However, it doesn&#39;t smell like your dog peed here.&quot;&gt;&gt;
+	&lt;&lt;set $foundWaterPuddle = true&gt;&gt;
+	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
+		The puddle on the ground actually appears to be water, like that from melted snow.
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;/span&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
-	&lt;&lt;display Kitchen&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Puddle" tags="K" position="1800,1400" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="Cookies Eaten" tags="" position="1603.3333333333335,1600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;span id=&quot;DisplayText2&quot;&gt;
+&lt;&lt;link &quot;Clean up the puddle&quot;&gt;&gt;
+	&lt;&lt;set $puddleCleaned = true&gt;&gt;
+	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
+		You clean up the puddle.
+		&lt;&lt;if $foundWaterPuddle&gt;&gt;
+			&lt;&lt;replace &quot;#DisplayText2&quot;&gt;&gt;
+				Since it is just water, you don&#39;t mind cleaning up the mess.
+			&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;set $foundWaterPuddle = true&gt;&gt;
+			&lt;&lt;replace &quot;#DisplayText2&quot;&gt;&gt;
+				A little grossed out by the dog pee, you sheepishly begin to clean up the mess. As you clean up, however, you realize that the puddle is actually just water, not pee. Huh it&#39;s like melted snow.
+			&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/span&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Cookies Eaten" tags="" position="1536.3333333333333,1603.3333333333333" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $santaAteCookies&gt;&gt;
 	SANTA ATE THE COOKIES AND MILK!!!!
 &lt;&lt;else&gt;&gt;
@@ -552,7 +526,7 @@ You nod. That would help a lot.
 		&lt;&lt;display &quot;Cookies Not Eaten&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt; 
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="42" name="Cookies Not Eaten" tags="" position="1726.6666666666667,1600.0000000000002" size="100,100">&lt;&lt;link &quot;Eat the cookies?&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="Cookies Not Eaten" tags="" position="1659.3333333333333,1603.3333333333333" size="100,100">&lt;&lt;link &quot;Eat the cookies?&quot;&gt;&gt;
 	&lt;&lt;set $cookiesEaten = true&gt;&gt;
 	&lt;&lt;set $playerAteCookies = true&gt;&gt;
 	&lt;&lt;replace &quot;#CookieStatus&quot;&gt;&gt;
