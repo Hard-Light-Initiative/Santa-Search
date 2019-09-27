@@ -117,7 +117,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 </script><tw-tag name="Ending" color="purple"></tw-tag>,<tw-tag name="IntroScene" color="gray"></tw-tag>,<tw-tag name="K" color="yellow"></tw-tag>,<tw-tag name="LR" color="red"></tw-tag>,<tw-tag name="PR" color="green"></tw-tag>,<tw-tag name="Room" color="blue"></tw-tag><tw-passagedata pid="1" name="Presents" tags="LR" position="1000,1000" size="100,100">&lt;span id=&quot;DisplayText&quot;&gt;
 &lt;&lt;link &quot;Shake a Present&quot;&gt;&gt;
@@ -156,7 +158,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
   &lt;&lt;script&gt;&gt;
 	  Engine.restart();
   &lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro#1" tags="IntroScene" position="0,125" size="100,100">I woke up in my bed, because I heard a loud noise out in the kitchen. I was scared at first, because what if it was someone breaking in, you know? But then I checked the clock on my dresser and I realized that it was midnight on christmas day, and I thought, [[what if it was Santa? -&gt;Intro#2]]</tw-passagedata><tw-passagedata pid="7" name="Intro#2" tags="IntroScene" position="0,248.33333333333334" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro#1" tags="IntroScene" position="0,125" size="100,100">I woke up in my bed, because I heard a loud noise out in the kitchen. I was scared at first, because what if it was someone breaking in, you know? But then I checked the clock on my dresser and I realized that it was midnight on christmas day, and I thought, [[what if it was Santa? -&gt;Intro#2]]
+
+&lt;&lt;audio &quot;ambient&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Intro#2" tags="IntroScene" position="0,248" size="100,100">&lt;&lt;nobr&gt;&gt;
 I got up and I went and checked in on my parents, and they hadn’t woken up. So I went out to the kitchen to see what had fallen. I looked around, and I saw that a
 &lt;span id=&quot;ctlink&quot;&gt;&lt;&lt;link &quot;cookie tin&quot;&gt;&gt; 
 	&lt;&lt;replace &quot;#ctlink&quot;&gt;&gt;
@@ -284,7 +288,7 @@ function format() {
 [[I checked on my Parents-&gt;Parents]]
 [[I checked in the Closet-&gt;Closet]]
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1501.6666666666667,1196.6666666666667" size="100,100">I went into the kitchen and ...
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1501,1196" size="100,100">I went into the kitchen and ...
 [[Got a snack-&gt;Snack]]		
 [[Looked at the family photos on the fridge-&gt;Photos]]
 [[Checked on the Cookies and Milk-&gt;Cookies and Milk]]
@@ -305,7 +309,7 @@ function format() {
 </tw-passagedata><tw-passagedata pid="15" name="Parents" tags="PR" position="1700,400" size="100,100">Your parents are still sound asleep.
 [[Wake them up]]
 
-&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Closet" tags="PR" position="1901.6666666666667,400" size="100,100">The closet was full of my parents&#39; clothes. There didn&#39;t appear to be anything of note in there.
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Closet" tags="PR" position="1901,400" size="100,100">The closet was full of my parents&#39; clothes. There didn&#39;t appear to be anything of note in there.
 
 &lt;&lt;if $playerCheckedDoor &amp; $playerCheckedKeyHolder&gt;&gt;
 	&lt;&lt;link &quot;I looked the house key in my dad&#39;s jackets.&quot;&gt;&gt;
@@ -438,7 +442,7 @@ You nod. That would help a lot.
 	&lt;&lt;return&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="28" name="Outside" tags="" position="1298.3333333333333,1200" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Snack" tags="K" position="1200,1400" size="100,100">I opened the fridge and grabbed out &lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
+</tw-passagedata><tw-passagedata pid="28" name="Outside" tags="" position="1298,1200" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Snack" tags="K" position="1200,1400" size="100,100">I opened the fridge and grabbed out &lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
 &lt;span id=&quot;FoodChoice&quot;&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Sandwich&quot;&gt;&gt;
@@ -548,7 +552,7 @@ You nod. That would help a lot.
 		&lt;&lt;display &quot;Cookies Eaten&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Intro#3a" tags="" position="0,500" size="100,100">Actually, I noticed that there was no smell to the spots so I tried touching the wet spots and I realized that they were actually cold, and there were even a few snowflakes still! Someone might have tracked it in recently. [[It had to be Santa!-&gt;Intro#3b]]</tw-passagedata><tw-passagedata pid="35" name="Intro#3b" tags="" position="0,625" size="100,100">I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had also noticed some weird wet spots in the kitchen, which turned out to be snow! I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Living Room]]</tw-passagedata><tw-passagedata pid="36" name="Timer Testing" tags="" position="2301.6666666666665,801.6666666666666" size="100,100">&lt;&lt;set $timer = 0&gt;&gt; /* measured in minutes */
+</tw-passagedata><tw-passagedata pid="34" name="Intro#3a" tags="" position="0,500" size="100,100">Actually, I noticed that there was no smell to the spots so I tried touching the wet spots and I realized that they were actually cold, and there were even a few snowflakes still! Someone might have tracked it in recently. [[It had to be Santa!-&gt;Intro#3b]]</tw-passagedata><tw-passagedata pid="35" name="Intro#3b" tags="" position="0,625" size="100,100">I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had also noticed some weird wet spots in the kitchen, which turned out to be snow! I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Living Room]]</tw-passagedata><tw-passagedata pid="36" name="Timer Testing" tags="" position="2301,801" size="100,100">&lt;&lt;set $timer = 0&gt;&gt; /* measured in minutes */
 
 Time Passed = &lt;span id= &quot;time&quot;&gt;&lt;&lt;- $timer&gt;&gt;&lt;/span&gt;
 
