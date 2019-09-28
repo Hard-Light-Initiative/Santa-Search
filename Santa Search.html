@@ -100,26 +100,23 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Santa Search" startnode="9" creator="Twine" creator-version="2.3.3" ifid="90EA8212-8B9F-4C31-80AB-A283274CBF3D" zoom="0.6" format="SugarCube" format-version="2.29.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-#HouseMap {
+	<div id="store-area" hidden><tw-storydata name="Santa Search" startnode="9" creator="Twine" creator-version="2.3.3" ifid="90EA8212-8B9F-4C31-80AB-A283274CBF3D" zoom="0.6" format="SugarCube" format-version="2.29.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#HouseMap {
   width: 430px;
   height: 300px;
 }
 
+.content {
+  border: 1px solid black;
+  padding: 2% 4% 5em;
+  margin: 2% 0;
+  overflow: auto;
+  background:rgba(255,255,255,0.5);
+  color: black;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 
@@ -160,7 +157,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
   &lt;&lt;script&gt;&gt;
 	  Engine.restart();
   &lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro#1" tags="IntroScene" position="28.333333333333336,138.33333333333334" size="100,100">I woke up in my bed, because I heard a loud noise out in the kitchen. I was scared at first, because what if it was someone breaking in, you know? But then I checked the clock on my dresser and I realized that it was midnight on christmas day, and I thought, [[what if it was Santa? -&gt;Intro#2]]
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro#1" tags="IntroScene" position="28.333333333333336,138.33333333333334" size="100,100">&lt;p class=&quot;content&quot;&gt;I woke up in my bed, because I heard a loud noise out in the kitchen. I was scared at first, because what if it was someone breaking in, you know? But then I checked the clock on my dresser and I realized that it was midnight on christmas day, and I thought, [[what if it was Santa? -&gt;Intro#2]]&lt;/p&gt;
 
 &lt;&lt;audio &quot;ambient&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Intro#2" tags="IntroScene" position="28.333333333333336,261.3333333333333" size="100,100">&lt;&lt;nobr&gt;&gt;
 I got up and I went and checked in on my parents, and they hadn’t woken up. So I went out to the kitchen to see what had fallen. I looked around, and I saw that a
