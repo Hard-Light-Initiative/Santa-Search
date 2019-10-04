@@ -110,44 +110,54 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
   padding: 2% 4% 5em;
   margin: 2% 0;
   overflow: auto;
-  background:rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.5);
   color: black;
 }
 
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: rgba(0,0,0,0);
+}
+
+body.start {
+  background-color: #111;
 }
 
 .content a.link-internal {
   color: red;
 }
 
-body.kitchen {
+html.kitchen {
   background-image: url("images/Kitchen.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 980px 700px;
+  background-position: center top;
+  background-color: black;
 }
 
-body.parentsroom {
+html.parentsroom {
   background-image: url("images/Parents Bedroom.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 980px 700px;
+  background-position: center top;
+  background-color: black;
 }
 
-body.myroom {
+html.myroom {
   background-image: url("images/Your Bedroom.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 980px 700px;
+  background-position: center top;
+  background-color: black;
 }
 
-body.livingroom {
+html.livingroom {
   background-image: url("images/Living Room.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+  background-size: 980px 700px;
+  background-position: center top;
+  background-color: black;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 
@@ -192,10 +202,17 @@ body.livingroom {
   &lt;&lt;script&gt;&gt;
 	  Engine.restart();
   &lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro#1" tags="IntroScene" position="28,138" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro#1" tags="IntroScene" position="28,138" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
 &lt;p class=&quot;content&quot;&gt;I woke up in my bed, because I heard a loud noise out in the kitchen. I was scared at first, because what if it was someone breaking in, you know? But then I checked the clock on my dresser and I realized that it was midnight on christmas day, and I thought, [[what if it was Santa? -&gt;Intro#2]]&lt;/p&gt;
 
-&lt;&lt;audio &quot;ambient&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Intro#2" tags="IntroScene" position="28,261" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;audio &quot;ambient&quot; loop play&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Intro#2" tags="IntroScene" position="28,261" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 I got up and I went and checked in on my parents, and they hadn’t woken up. So I went out to the kitchen to see what had fallen. I looked around, and I saw that a
 &lt;span id=&quot;ctlink&quot;&gt;&lt;&lt;link &quot;cookie tin&quot;&gt;&gt; 
 	&lt;&lt;replace &quot;#ctlink&quot;&gt;&gt;
@@ -211,10 +228,15 @@ had fallen on the floor!
 &lt;&lt;/nobr&gt;&gt;
 &lt;span id=&quot;DisplayText&quot;&gt;&lt;/span&gt;
 It wasn’t that surprising though, we left it in a pretty precarious place. At least there were no cookies left on it.
-[[I decided to check on the presents and see if Santa had visited yet.-&gt;Intro#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="8" name="Intro#3" tags="IntroScene" position="28,388" size="100,100">&lt;p class=&quot;content&quot;&gt;I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had noticed some weird wet spots in the kitchen on my way out, but I had dismissed them because maybe my dog had an accident? But now I was wondering if they were [[something else.-&gt;Intro#3a]]
+[[I decided to check on the presents and see if Santa had visited yet.-&gt;Intro#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="8" name="Intro#3" tags="IntroScene" position="28,388" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had noticed some weird wet spots in the kitchen on my way out, but I had dismissed them because maybe my dog had an accident? But now I was wondering if they were [[something else.-&gt;Intro#3a]]
 
 
-I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Hallway]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="9" name="Start" tags="" position="28,13" size="100,100">&lt;h1&gt;SANTA SEARCH&lt;/h1&gt;
+I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Hallway]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="9" name="Start" tags="" position="28,13" size="100,100">&lt;&lt;addclass &quot;body&quot; &quot;start&quot;&gt;&gt;
+&lt;h1&gt;SANTA SEARCH&lt;/h1&gt;
 
 [[Start-&gt;Intro#1]] 
 /*[[End]]*/
@@ -283,7 +305,11 @@ function format() {
 
 //ready();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Living Room" tags="Room" position="666,582" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Living Room" tags="Room" position="666,582" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if not _checkingPresents
 		and not _checkingFireplace
 		and not _checkingStockings
@@ -313,12 +339,20 @@ function format() {
 &lt;&lt;/nobr&gt;&gt;&lt;/p&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;display House-Map&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Parents&#39; Bedroom" tags="Room" position="1230,158" size="100,100">&lt;p class=&quot;content&quot;&gt;Walking into my parents&#39; room, it appeared like both of them were still asleep, but I wasn&#39;t completely sure. The closet door also was slightly ajar.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Parents&#39; Bedroom" tags="Room" position="1230,158" size="100,100">&lt;&lt;addclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;Walking into my parents&#39; room, it appeared like both of them were still asleep, but I wasn&#39;t completely sure. The closet door also was slightly ajar.
 
 [[I checked on my Parents-&gt;Parents]]
 [[I checked in the Closet-&gt;Closet]]&lt;/p&gt;
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1532,524" size="100,100">&lt;p class=&quot;content&quot;&gt;I went into the kitchen and ...
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1532,524" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;I went into the kitchen and ...
 [[Got a snack-&gt;Snack]]		
 [[Looked at the family photos on the fridge-&gt;Photos]]
 [[Checked on the Cookies and Milk-&gt;Cookies and Milk]]
@@ -345,7 +379,11 @@ function format() {
 		
 	&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="17" name="Your Room" tags="Room" position="940,16" size="100,100">&lt;p class=&quot;content&quot;&gt;I went back into my room. Nothing was out of the ordinary in there.
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="17" name="Your Room" tags="Room" position="940,16" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;I went back into my room. Nothing was out of the ordinary in there.
 
 [[I went back to bed.-&gt;sleep]]&lt;/p&gt;
 
@@ -583,7 +621,15 @@ You nod. That would help a lot.
 		&lt;&lt;display &quot;Cookies Eaten&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Intro#3a" tags="" position="28,513" size="100,100">&lt;p class=&quot;content&quot;&gt;Actually, I noticed that there was no smell to the spots so I tried touching the wet spots and I realized that they were actually cold, and there were even a few snowflakes still! Someone might have tracked it in recently. [[It had to be Santa!-&gt;Intro#3b]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="35" name="Intro#3b" tags="" position="28,638" size="100,100">&lt;p class=&quot;content&quot;&gt;I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had also noticed some weird wet spots in the kitchen, which turned out to be snow! I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Hallway]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="36" name="Timer Testing" tags="" position="2299,434" size="100,100">&lt;&lt;set $timer = 0&gt;&gt; /* measured in minutes */
+</tw-passagedata><tw-passagedata pid="34" name="Intro#3a" tags="" position="28,513" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;Actually, I noticed that there was no smell to the spots so I tried touching the wet spots and I realized that they were actually cold, and there were even a few snowflakes still! Someone might have tracked it in recently. [[It had to be Santa!-&gt;Intro#3b]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="35" name="Intro#3b" tags="" position="28,638" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had also noticed some weird wet spots in the kitchen, which turned out to be snow! I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Hallway]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="36" name="Timer Testing" tags="" position="2299,434" size="100,100">&lt;&lt;set $timer = 0&gt;&gt; /* measured in minutes */
 
 Time Passed = &lt;span id= &quot;time&quot;&gt;&lt;&lt;- $timer&gt;&gt;&lt;/span&gt;
 
