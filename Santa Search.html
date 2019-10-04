@@ -157,6 +157,14 @@ html.livingroom {
   background-size: 980px 700px;
   background-position: center top;
   background-color: black;
+}
+
+html.santa {
+  background-image: url("images/Santa.jpg");
+  background-repeat: no-repeat;
+  background-size: 980px 700px;
+  background-position: center top;
+  background-color: black;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -196,8 +204,17 @@ html.livingroom {
 	&lt;&lt;set $foundFireplaceFootprints = true&gt;&gt;
 	&lt;&lt;return&gt;&gt;
 
-&lt;&lt;/nobr&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="3" name="Ending#2" tags="Ending" position="380,216" size="100,100">&lt;p class=&quot;content&quot;&gt;As I went outside, I finally saw him. He had just gotten into his sleigh and started to take off into the sky as I walked out the door. It was amazing. I realized that there wasn&#39;t anything else I could do now so I went back to my room and tried to fall asleep but I couldn&#39;t I was so excited. Eventually Christmas morning came. I was tired from getting no sleep, but it was all worth it. Santa is REAL! 
-[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="4" name="Ending#1" tags="Ending" position="260,216" size="100,100">&lt;p class=&quot;content&quot;&gt;I didn&#39;t get to meet Santa before I went to bed, but I did find enough proof that he was here, and when I woke up and started opening presents, I found one that I don&#39;t think even my parents were expecting, so I know Santa left it for me!
+&lt;&lt;/nobr&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="3" name="Ending#2" tags="Ending" position="380,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;santa&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;As I went outside, I finally saw him. He had just gotten into his sleigh and started to take off into the sky as I walked out the door. It was amazing. I realized that there wasn&#39;t anything else I could do now so I went back to my room and tried to fall asleep but I couldn&#39;t I was so excited. Eventually Christmas morning came. I was tired from getting no sleep, but it was all worth it. Santa is REAL! 
+[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="4" name="Ending#1" tags="Ending" position="260,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;I didn&#39;t get to meet Santa before I went to bed, but I did find enough proof that he was here, and when I woke up and started opening presents, I found one that I don&#39;t think even my parents were expecting, so I know Santa left it for me!
 [[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="5" name="End" tags="" position="400,16" size="100,100">&lt;&lt;link &quot;Restart?&quot;&gt;&gt;
   &lt;&lt;script&gt;&gt;
 	  Engine.restart();
@@ -389,7 +406,11 @@ function format() {
 
 &lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Dining Room" tags="Room" position="1465,73" size="100,100">Yum food
 
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="sleep" tags="" position="841,208" size="100,100">&lt;p class=&quot;content&quot;&gt;You reason that if Santa is here, he would leave you something under the tree while you&#39;re asleep. Besides, you&#39;re tired. You climb into bed and [[drift off easy.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="20" name="Ending#3" tags="Ending" position="500,216" size="100,100">&lt;p class=&quot;content&quot;&gt;You wake up on Christmas day, and immediately rush to the tree to begin opening presents. You don&#39;t notice anything particularly magical, but your presents delight you nonetheless. You even got that toy you wanted so bad! This was a great Christmas.
+&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="sleep" tags="" position="841,208" size="100,100">&lt;p class=&quot;content&quot;&gt;You reason that if Santa is here, he would leave you something under the tree while you&#39;re asleep. Besides, you&#39;re tired. You climb into bed and [[drift off easy.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="20" name="Ending#3" tags="Ending" position="500,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;You wake up on Christmas day, and immediately rush to the tree to begin opening presents. You don&#39;t notice anything particularly magical, but your presents delight you nonetheless. You even got that toy you wanted so bad! This was a great Christmas.
 
 Would have been better if you met Santa, though.
 
