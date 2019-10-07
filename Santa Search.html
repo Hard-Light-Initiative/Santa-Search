@@ -179,44 +179,36 @@ html.outside {
 
 
 
-</script><tw-tag name="Ending" color="purple"></tw-tag>,<tw-tag name="IntroScene" color="gray"></tw-tag>,<tw-tag name="K" color="yellow"></tw-tag>,<tw-tag name="LR" color="red"></tw-tag>,<tw-tag name="PR" color="green"></tw-tag>,<tw-tag name="Room" color="blue"></tw-tag><tw-passagedata pid="1" name="Presents" tags="LR" position="763,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;span id=&quot;DisplayText&quot;&gt;
-&lt;&lt;link &quot;Shake a Present&quot;&gt;&gt;
+</script><tw-tag name="Ending" color="purple"></tw-tag>,<tw-tag name="IntroScene" color="gray"></tw-tag>,<tw-tag name="K" color="yellow"></tw-tag>,<tw-tag name="LR" color="red"></tw-tag>,<tw-tag name="PR" color="green"></tw-tag>,<tw-tag name="Room" color="blue"></tw-tag><tw-passagedata pid="1" name="Presents" tags="LR" position="666.3333333333334,779.3333333333334" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;span id=&quot;DisplayText&quot;&gt;
+&lt;&lt;link &quot;I shook a present&quot;&gt;&gt;
 	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
 		&lt;&lt;display &quot;Shake&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Open a Present&quot;&gt;&gt;
+&lt;&lt;link &quot;I opened a present&quot;&gt;&gt;
 	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
 		&lt;&lt;display &quot;Open&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Count the Presents&quot;&gt;&gt;
+&lt;&lt;link &quot;I counted the presents&quot;&gt;&gt;
 	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
 		&lt;&lt;display &quot;Count&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/span&gt;
 
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="2" name="Fireplace" tags="LR" position="563,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;if !(visited() &gt; 1) and !$santaHasLeftTheBuilding&gt;&gt; 
-		Looking closer at the fireplace, you see large boot prints in the ash. Santa MUST HAVE come down the chimney, just as he&#39;s supposed to and left these bootprints.
-	&lt;&lt;elseif !(visited() &gt; 1) and $santaHasLeftTheBuilding&gt;&gt;
-		You see two distinct sets of bootprints in the fireplace. Santa must have already come and gone.
-	&lt;&lt;elseif (visited() &gt; 1) and !$santaHasLeftTheBuilding&gt;&gt;
-		You see the same bootprints from before in the fireplace. Santa must still be here.
-	&lt;&lt;else&gt;&gt;
-		In addition to the first set of bootprints you saw earlier, you see another set of bootprints going in the opposite direction. Santa must have left already.
-	&lt;&lt;/if&gt;&gt;
-	&lt;&lt;set $foundFireplaceFootprints = true&gt;&gt;
-	&lt;&lt;return&gt;&gt;
-
-&lt;&lt;/nobr&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="3" name="Ending#2" tags="Ending" position="380,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="2" name="Fireplace" tags="LR" position="466.3333333333333,779.3333333333334" size="100,100">&lt;p class=&quot;content&quot;&gt;
+Looking closely at the fireplace, I saw large boot prints in the ash. Santa MUST have come down the chimney, just as he&#39;s supposed to, and left these bootprints!
+&lt;&lt;set $foundFireplaceFootprints = true&gt;&gt;
+&lt;&lt;return&gt;&gt;
+&lt;/p&gt;</tw-passagedata><tw-passagedata pid="3" name="Ending#2" tags="Ending" position="548.3333333333334,331" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;santa&quot;&gt;&gt;
-&lt;p class=&quot;content&quot;&gt;As I went outside, I finally saw him. He had just gotten into his sleigh and started to take off into the sky as I walked out the door. It was amazing. I realized that there wasn&#39;t anything else I could do now so I went back to my room and tried to fall asleep but I couldn&#39;t I was so excited. Eventually Christmas morning came. I was tired from getting no sleep, but it was all worth it. Santa is REAL! 
-[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="4" name="Ending#1" tags="Ending" position="260,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;As I went outside, I finally saw him. He was just getting into his sleigh to leave, but I called out to him, and he actually looked down and waved to me! I waved back, and he was suddenly standing in front of me. I looked up in awe at his kind face and big bushy beard, which I could barely resist reaching up and touching because it looked so warm and fuzzy, and he invited me for a ride on his sleigh! Of course I said yes, and so I went with Santa to deliver presents to the rest of my town before he dropped me off back home and sent me to bed.
+I climbed back into bed and snuggled into the warm sheets, and I fell asleep knowing that I had actually met Santa!
+[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="4" name="Ending#1" tags="Ending" position="691.6666666666667,79.33333333333331" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
@@ -328,7 +320,7 @@ function format() {
 
 //ready();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Living Room" tags="Room" position="666,582" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Living Room" tags="Room" position="576,533.6666666666667" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
@@ -370,26 +362,26 @@ function format() {
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;p class=&quot;content&quot;&gt;Walking into my parents&#39; room, it appeared like both of them were still asleep, but I wasn&#39;t completely sure. The closet door also was slightly ajar.
+&lt;p class=&quot;content&quot;&gt;I snuck into my parents&#39; room. Both of them were still asleep, but I was careful not to wake them just in case. The closet door also was slightly ajar.
 
 [[I checked on my Parents-&gt;Parents]]
 [[I checked in the Closet-&gt;Closet]]&lt;/p&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;display House-Map&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1532,524" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1390.3333333333333,490.6666666666667" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;p class=&quot;content&quot;&gt;I went into the kitchen and ...
-[[Got a snack-&gt;Snack]]		
-[[Looked at the family photos on the fridge-&gt;Photos]]
-[[Checked on the Cookies and Milk-&gt;Cookies and Milk]]
-&lt;&lt;if !$puddleCleaned&gt;&gt;[[Checked on the puddles-&gt;Puddle]]&lt;&lt;/if&gt;&gt;&lt;/p&gt;
+[[Got a snack from the fridge.-&gt;Snack]]		
+[[Looked at the family photos on the fridge.-&gt;Photos]]
+[[Checked on the Cookies and Milk.-&gt;Cookies and Milk]]
+&lt;&lt;if !$puddleCleaned&gt;&gt;[[Looked at the puddles on the floor.-&gt;Puddle]]&lt;&lt;/if&gt;&gt;&lt;/p&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;display House-Map&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Cookies and Milk" tags="K" position="1631,728" size="100,100">&lt;p class=&quot;content&quot;&gt;These are the cookies and milk you left out for Santa.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Cookies and Milk" tags="K" position="1489.3333333333333,694.6666666666666" size="100,100">&lt;p class=&quot;content&quot;&gt;There was a plate of cookies and milk I left out for Santa.
 
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;CookieStatus&quot;&gt;
@@ -400,10 +392,11 @@ function format() {
 &lt;&lt;/if&gt;&gt;
 &lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="15" name="Parents" tags="PR" position="1130,358" size="100,100">&lt;p class=&quot;content&quot;&gt;Your parents are still sound asleep.
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="15" name="Parents" tags="PR" position="1015,408" size="100,100">&lt;p class=&quot;content&quot;&gt;My parents were still sound asleep.
 [[Wake them up]]
 
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="16" name="Closet" tags="PR" position="1331,358" size="100,100">&lt;p class=&quot;content&quot;&gt;The closet was full of my parents&#39; clothes. There didn&#39;t appear to be anything of note in there.
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="16" name="Closet" tags="PR" position="1216,408" size="100,100">&lt;p class=&quot;content&quot;&gt;The closet was full of my parents&#39; clothes. There didn&#39;t appear to be anything of note in there.
+&lt;&lt;set $stockingsFilled = true&gt;&gt;
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $playerCheckedDoor &amp; $playerCheckedKeyHanger &amp; $dadsFavoriteJacketKnown&gt;&gt;
@@ -415,6 +408,8 @@ function format() {
 		&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/link&gt;&gt;
 	&lt;/span&gt;
+&lt;&lt;else-if $playerCheckedDoor &amp; $playerCheckedKeyHanger &amp; !$dadsFavoriteJacketKnown&gt;&gt;
+	I knew one of dad&#39;s jackets had to have the house key in its pocket, but which one? I couldn&#39;t even remember which one was his favorite. If I knew that, I would at least probably be able to find the key in its pockets.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="17" name="Your Room" tags="Room" position="1053.3333333333333,57.66666666666667" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -428,20 +423,25 @@ function format() {
 [[I went back to bed.-&gt;sleep]]&lt;/p&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;display House-Map&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="sleep" tags="" position="954.3333333333334,249.66666666666669" size="100,100">&lt;p class=&quot;content&quot;&gt;You reason that if Santa is here, he would leave you something under the tree while you&#39;re asleep. Besides, you&#39;re tired. You climb into bed and [[drift off easy.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="19" name="Ending#3" tags="Ending" position="500,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="sleep" tags="" position="966,263" size="100,100">&lt;p class=&quot;content&quot;&gt;I reasoned that Santa probably would leave me something if I went to bed instead of looking for him, so I climbed into bed &lt;&lt;nobr&gt;&gt;&lt;&lt;if $foundStockingsFilled &amp; $foundNewPresents &amp; $foundFireplaceFootprints &amp; $foundPuddleWater $foundCookiesEatenBySanta&gt;&gt;
+[[and fell asleep.-&gt;Ending#3]]
+&lt;&lt;else&gt;&gt;
+[[and fell asleep.-&gt;Ending#1]]
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;/p&gt;</tw-passagedata><tw-passagedata pid="19" name="Ending#3" tags="Ending" position="633.3333333333334,219.33333333333331" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
-&lt;p class=&quot;content&quot;&gt;I woke up on Christmas day and immedeately ran to the living room to see if there were any new presents from Santa. I didn&#39;t find any presents that weren&#39;t there already, but the first one I opened was a new game for a console I didn&#39;t even have yet, so I knew it had to be in one of these presents! I started tearing all of them open, socks and toys and games alike until I finally found it! The newest Nintendo console! Wow! I was so grateful and excited and happy. Anyway, me and my parents kept opening our presents and laughing and then we had a great breakfast and I had an amazing Christmas with my parents.
+&lt;p class=&quot;content&quot;&gt;I woke up on Christmas day and immediately ran to the living room to see if there were any new presents from Santa. I didn&#39;t find any presents that weren&#39;t there already, but the first one I opened was a new game for a console I didn&#39;t even have yet, so I knew it had to be in one of these presents! I started tearing all of them open, socks and toys and games alike until I finally found it! The newest Nintendo console! Wow! I was so grateful and excited and happy. Anyway, me and my parents kept opening our presents and laughing and then we had a great breakfast and I had an amazing Christmas with my parents.
 
 Would have been better if I had met Santa, though.
 
-[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="20" name="Wake them up" tags="" position="936.6666666666666,436.3333333333333" size="100,100">&lt;p class=&quot;content&quot;&gt;You suddenly realize that you could be alone in the house with a stranger. What if it isn&#39;t Santa? What if it&#39;s a burglar, or worse? You panic and shake your parents awake.
-They ask you what&#39;s wrong and why you woke them up.
-You tell them that you think there&#39;s someone in the house, and you can&#39;t sleep, and can they please check the house?
-One gives you a tight hug and helps you calm down, while the other checks the house. They come back and tell you that there&#39;s no one in the house, but you can sleep with them if it makes you feel safe.
-You nod. That would help a lot.
-[[You fall asleep in the warm embrace of your parents.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="21" name="Variables" tags="" position="1826.6666666666665,168" size="100,100">&lt;&lt;set $santaHasLeftTheBuilding = false&gt;&gt;
+[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="20" name="Wake them up" tags="" position="820,356.3333333333333" size="100,100">&lt;p class=&quot;content&quot;&gt;I suddenly realized that there is a chance that whoever was in my house may not have been Santa. I started panicking immediately, and went to wake up my parents. They asked me why I was up so early, and I quickly explained to them that I had heard a loud noise and that I thought maybe someone was in the house and that I was scared, so one went to check the house while I snuggled into my parents&#39; bed wih the other.
+&lt;&lt;if $foundStockingsFilled &amp; $foundNewPresents &amp; $foundFireplaceFootprints &amp; $foundPuddleWater $foundCookiesEatenBySanta&gt;&gt;
+[[I eventually fell asleep, safe in my parents&#39; arms.-&gt;Ending#3]]
+&lt;&lt;else&gt;&gt;
+[[I eventually fell asleep, safe in my parents&#39; arms.-&gt;Ending#1]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="21" name="Variables" tags="" position="1826.6666666666665,168" size="100,100">&lt;&lt;set $santaHasLeftTheBuilding = false&gt;&gt;
 
 /* Time Keeping Variables */
 &lt;&lt;set $overallTimePassed = 0&gt;&gt;
@@ -479,74 +479,74 @@ You nod. That would help a lot.
 &lt;&lt;set $playerCheckedKeyHanger = false&gt;&gt;     /*Living Room*/
 &lt;&lt;set $playerCheckedDoor = false&gt;&gt; 			/*Living Room*/
 &lt;&lt;set $dadsFavoriteJacketKnown = false&gt;&gt; 	/*Kitchen*/
-&lt;&lt;set $jacketChances = 0&gt;&gt; 					/*Parents&#39; Bedroom*/</tw-passagedata><tw-passagedata pid="22" name="Stockings" tags="LR" position="363,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $jacketChances = 0&gt;&gt; 					/*Parents&#39; Bedroom*/</tw-passagedata><tw-passagedata pid="22" name="Stockings" tags="LR" position="266.3333333333333,779.3333333333334" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;DisplayText&quot;&gt;
 &lt;&lt;if $chairMoved&gt;&gt;
-	You stand on a chair to get a better look into the stockings.
+	I stood on a chair to get a better look into the stockings.
 	&lt;&lt;if $stockingsFilled&gt;&gt;
 		&lt;&lt;set $foundStockingsFilled = true&gt;&gt;
-		The stockings have been filled! Santa MUST be here!
+		The stockings were filled! Santa MUST have been here! Maybe he even left some new presents under the tree?
 	&lt;&lt;else&gt;&gt;
-		The stockings have not been filled yet.
+		The stockings had not been filled yet.
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
-	The stockings are too high for you to see into. 
-	&lt;&lt;link &quot;You move a chair to get up higher.&quot;&gt;&gt;
+	The stockings were too high for me to see into. 
+	&lt;&lt;link &quot;I moved a chair to get up higher.&quot;&gt;&gt;
 		&lt;&lt;set $chairMoved = true&gt;&gt;
 		&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
-				You stand on a chair to get a better look into the stockings.
+		I stood on a chair to get a better look into the stockings.
 	&lt;&lt;if $stockingsFilled&gt;&gt;
 		&lt;&lt;set $foundStockingsFilled = true&gt;&gt;
-		The stockings have been filled! Santa MUST be here!
+		The stockings had been filled! Santa MUST be here!
 	&lt;&lt;else&gt;&gt;
-		The stockings have not been filled yet.
+		The stockings had not been filled yet.
 	&lt;&lt;/if&gt;&gt;
 		&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;/span&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="23" name="Shake" tags="" position="656,981" size="100,100">You pick up one of the presents and shake it. 
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="23" name="Shake" tags="" position="656,981" size="100,100">I picked up one of the presents and shook it. 
 &lt;&lt;switch random(1,3)&gt;&gt;
 	&lt;&lt;case 1&gt;&gt;
-		It doesn&#39;t make much noise. Probably socks. Ugh. 
+		It didn&#39;t make much noise. Probably socks. Ugh. 
 	&lt;&lt;case 2&gt;&gt;
-		The box jingles a bit. Probably a new toy!
+		The box jingled a bit. Probably a new toy!
 	&lt;&lt;case 3&gt;&gt;
-		The box is small and thin. It looks like it might be a new video game!
-&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Open" tags="" position="759,981" size="100,100">You pick up one of the presents and open it. 
+		The box was small and thin. Maybe it was a new video game!
+&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Open" tags="" position="759,981" size="100,100">I picked up one of the presents and opened it. 
 &lt;&lt;switch random(1,3)&gt;&gt;
 	&lt;&lt;case 1&gt;&gt;
-		Oh man they&#39;re just socks. 
+		Oh man, they were just socks. 
 	&lt;&lt;case 2&gt;&gt;
-		Hey its a new toy! YAY!
+		It was a new toy! YAY!
 	&lt;&lt;case 3&gt;&gt;
-		Oh cool its a new video game! I can&#39;t wait to play this!
+		I got a new video game! I couldn&#39;t wait to play it!
 	&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Count" tags="" position="863,981" size="100,100">&lt;&lt;if $newPresentsPlaced&gt;&gt;
 	&lt;&lt;if !$foundNewPresents&gt;&gt;
 		&lt;&lt;set $foundNewPresents = true&gt;&gt;
-		After taking some time to count all of the presents addressed to you, you find that there are three new presents to you under the tree, all from Santa. He must&#39;ve just placed these here.
+		I took some time to count the presents under the tree and I found some new presents from Santa! 
 	&lt;&lt;else&gt;&gt; 
-		There appear to be no more new presents from Santa.
+		I counted again, but there were no more new presents from Santa.
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
-	After taking some time to count all of the presents addressed to you, you find that there are not any new presents to you under the tree. Maybe Santa just hasn&#39;t gotten to place them yet?
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Door" tags="LR" position="963,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+	I took some time to count the presents under the tree, but Santa hadn&#39;t left any new presents yet.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Door" tags="LR" position="866.3333333333334,779.3333333333334" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $playerHasKey&gt;&gt;
-	The door unlocks.
-	[[Go Outside-&gt;Outside]]
+	I put the key in the lock and [[open the door.-&gt;Outside]]
 &lt;&lt;else&gt;&gt;
 	&lt;&lt;set $playerCheckedDoor = true&gt;&gt;
 	&lt;span id=&quot;DisplayText&quot;&gt;
-	The door is locked.
+	The door was locked.
 	&lt;&lt;if !$playerCheckedKeyHanger&gt;&gt;
 		&lt;&lt;link &quot;Check the key hanger for the keys&quot;&gt;&gt;
+			&lt;&lt;set $santaAteCookies = true&gt;&gt;
 			&lt;&lt;set $playerCheckedKeyHanger = true&gt;&gt;
 			&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
-				The door is locked. The keys aren&#39;t hanging where they are supposed to be. Maybe dad left them in his jacket pockets like he always does.
+				I checked the hanger by the door for the keys. They weren&#39;t there, which makes sense because dad always forgot to put them back. Sometimes they end up there like they&#39;re supposed to be, but most of the time they sit in his jacket pocket until someone has to try to find them.
 			&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;/link&gt;&gt;
 	&lt;&lt;else&gt;&gt;	
-		 The keys aren&#39;t hanging where they are supposed to be. Maybe dad left them in his jacket pockets like he always does.
+		 The keys weren&#39;t by the door. They must have been in one of dad&#39;s jacket pockets.
 	&lt;&lt;/if&gt;&gt;
 	&lt;/span&gt;
 &lt;&lt;/if&gt;&gt;
@@ -555,28 +555,31 @@ You nod. That would help a lot.
 	&lt;&lt;return&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
-&lt;/p&gt;</tw-passagedata><tw-passagedata pid="27" name="Snack" tags="K" position="1231,728" size="100,100">&lt;p class=&quot;content&quot;&gt;I opened the fridge and grabbed out &lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
+&lt;/p&gt;</tw-passagedata><tw-passagedata pid="27" name="Snack" tags="K" position="1089.3333333333333,694.6666666666666" size="100,100">&lt;p class=&quot;content&quot;&gt;I opened the fridge and grabbed&lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
 &lt;span id=&quot;FoodChoice&quot;&gt;
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;link &quot;Sandwich&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#Food&quot;&gt;&gt;a sandwhich.&lt;&lt;/replace&gt;&gt;
+&lt;&lt;link &quot;A sandwich.&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#Food&quot;&gt;&gt; a sandwich I made with peanut butter, nutella, and little marshmallows. It was so good!&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;remove &quot;#FoodChoice&quot;&gt;&gt;
+	&lt;&lt;set $newPresentsPlaced = true&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;link &quot;String Cheese&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#Food&quot;&gt;&gt;some string cheese.&lt;&lt;/replace&gt;&gt;
+&lt;&lt;link &quot;Some string cheese.&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#Food&quot;&gt;&gt; some string cheese. I peeled and ate half the stick before I realized I should get back to finding Santa and just ate the rest without peeling it.&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;remove &quot;#FoodChoice&quot;&gt;&gt;
+	&lt;&lt;set $newPresentsPlaced = true&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;link &quot;Water&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#Food&quot;&gt;&gt;the water jug.&lt;&lt;/replace&gt;&gt;
+&lt;&lt;link &quot;A jug of water.&quot;&gt;&gt;
+	&lt;&lt;replace &quot;#Food&quot;&gt;&gt; the water jug. Looking for Santa is exhausting work, and I needed a nice glass of cold water. I spilled a little while trying to pour it into a cup, but I made sure to clean it up!&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;remove &quot;#FoodChoice&quot;&gt;&gt;
+	&lt;&lt;set $newPresentsPlaced = true&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;/span&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="28" name="Photos" tags="K" position="1431,728" size="100,100">&lt;p class=&quot;content&quot;&gt;I looked at the photos on the fridge and saw&lt;span id=&quot;Action&quot;&gt;...&lt;/span&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="28" name="Photos" tags="K" position="1289.3333333333333,694.6666666666666" size="100,100">&lt;p class=&quot;content&quot;&gt;I looked at the photos on the fridge and saw&lt;span id=&quot;Action&quot;&gt;...&lt;/span&gt;
 &lt;span id=&quot;ActionChoice&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Soccer&quot;&gt;&gt;
 	&lt;&lt;replace &quot;#Action&quot;&gt;&gt; pictures of myself playing soccer. There&#39;s a picture of me on my dad&#39;s shoulders holding a trophy from when my team won! (I was the best on the team, of course.) 
@@ -630,10 +633,10 @@ You nod. That would help a lot.
 &lt;&lt;/nobr&gt;&gt;&lt;/span&gt;
 
 
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="29" name="Puddle" tags="K" position="1831,728" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="29" name="Puddle" tags="K" position="1689.3333333333333,694.6666666666666" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;span id=DisplayText&gt;
 &lt;&lt;if $foundPuddleWater&gt;&gt;
-	The puddles on the ground appeared to be water, not dog pee like I thought originally.
+	The puddles on the ground appeared to be water, not dog pee like I thought at first.
 &lt;&lt;else&gt;&gt;
 	It looked like my dog had peed itself on the kitchen floor again. Gross. &lt;&lt;link &quot;However, it didn&#39;t smell like pee.&quot;&gt;&gt;
 	&lt;&lt;set $foundPuddleWater = true&gt;&gt;
@@ -652,23 +655,23 @@ You nod. That would help a lot.
 		I cleaned up the puddles.
 		&lt;&lt;if $foundPuddleWater&gt;&gt;
 			&lt;&lt;replace &quot;#DisplayText2&quot;&gt;&gt;
-				Since it is just water, I just wiped it up with some paper towels I got off of the counter. 
+				Since it was just water, I just wiped it up with some paper towels I got off of the counter. 
 			&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;else&gt;&gt;
 			&lt;&lt;set $foundPuddleWater = true&gt;&gt;
 			&lt;&lt;replace &quot;#DisplayText2&quot;&gt;&gt;
-				It was super gross cleaning up the puddles, but as I wiped it up, I realized that it wasn&#39;t pee, but rather just puddles of cold water.
+				It was super gross cleaning up the puddles, but as I wiped it up, I realized that it wasn&#39;t pee, but rather just puddles of cold water, so it wasn&#39;t that bad.
 			&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="30" name="Cookies Eaten" tags="" position="1567,931" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="30" name="Cookies Eaten" tags="" position="1425.3333333333333,897.6666666666666" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $santaAteCookies&gt;&gt;
 	SANTA ATE THE COOKIES AND MILK!!!!
 &lt;&lt;else&gt;&gt;
-	You ate santa&#39;s cookies and milk.
+	I had eaten the cookies and milk, though. I hoped this wouldn&#39;t put me on the naughty list.
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;link &quot;Replace the cookies and milk?&quot;&gt;&gt;
@@ -677,11 +680,11 @@ You nod. That would help a lot.
 	&lt;&lt;set $cookiesReplaced = true&gt;&gt;
 	&lt;&lt;/nobr&gt;&gt;
 	&lt;&lt;replace &quot;#CookieStatus&quot;&gt;&gt;
-		You&#39;ve replaced Santa&#39;s cookies and milk. Hopefully he&#39;ll like them.
+		I carefully replaced Santa&#39;s cookies and milk, hoping he would like them.
 		&lt;&lt;display &quot;Cookies Not Eaten&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt; 
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="31" name="Cookies Not Eaten" tags="" position="1690,931" size="100,100">&lt;&lt;link &quot;Eat the cookies?&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="31" name="Cookies Not Eaten" tags="" position="1548.3333333333333,897.6666666666666" size="100,100">&lt;&lt;link &quot;I ate the cookies and milk.&quot;&gt;&gt;
 	&lt;&lt;set $cookiesEaten = true&gt;&gt;
 	&lt;&lt;set $playerAteCookies = true&gt;&gt;
 	&lt;&lt;replace &quot;#CookieStatus&quot;&gt;&gt;
