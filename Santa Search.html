@@ -165,7 +165,13 @@ html.santa {
   background-size: 980px 700px;
   background-position: center top;
   background-color: black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+}
+
+html.outside {
+  background-color: white;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -260,7 +266,7 @@ I kept looking over the presents and the tree and everything, but I couldn’t f
 /*[[SKIP INTRO-&gt;Living Room]]*/
 &lt;&lt;display Variables&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;ambient&quot; &quot;Audio/Jingle Bells Calm.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="House-Map" tags="" position="2300,98" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;cacheaudio &quot;ambient&quot; &quot;Audio/Jingle Bells Calm.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="House-Map" tags="" position="1826.6666666666665,48" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;img title=&quot;&quot;
 src=&quot;images/Map.png&quot; id=&quot;HouseMap&quot; usemap=&quot;#MapHouse&quot;&gt;
 
@@ -322,10 +328,12 @@ function format() {
 
 //ready();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Living Room" tags="Room" position="666,582" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Living Room" tags="Room" position="666,582" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if not _checkingPresents
 		and not _checkingFireplace
@@ -356,26 +364,32 @@ function format() {
 &lt;&lt;/nobr&gt;&gt;&lt;/p&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;display House-Map&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Parents&#39; Bedroom" tags="Room" position="1230,158" size="100,100">&lt;&lt;addclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Parents&#39; Bedroom" tags="Room" position="1230,158" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;p class=&quot;content&quot;&gt;Walking into my parents&#39; room, it appeared like both of them were still asleep, but I wasn&#39;t completely sure. The closet door also was slightly ajar.
 
 [[I checked on my Parents-&gt;Parents]]
 [[I checked in the Closet-&gt;Closet]]&lt;/p&gt;
-
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1532,524" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;display House-Map&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kitchen" tags="Room" position="1532,524" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;p class=&quot;content&quot;&gt;I went into the kitchen and ...
 [[Got a snack-&gt;Snack]]		
 [[Looked at the family photos on the fridge-&gt;Photos]]
 [[Checked on the Cookies and Milk-&gt;Cookies and Milk]]
 &lt;&lt;if !$puddleCleaned&gt;&gt;[[Checked on the puddles-&gt;Puddle]]&lt;&lt;/if&gt;&gt;&lt;/p&gt;
-&lt;&lt;display House-Map&gt;&gt;
-</tw-passagedata><tw-passagedata pid="14" name="Cookies and Milk" tags="K" position="1631,728" size="100,100">&lt;p class=&quot;content&quot;&gt;These are the cookies and milk you left out for Santa.
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;display House-Map&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Cookies and Milk" tags="K" position="1631,728" size="100,100">&lt;p class=&quot;content&quot;&gt;These are the cookies and milk you left out for Santa.
 
 &lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;CookieStatus&quot;&gt;
@@ -391,35 +405,43 @@ function format() {
 
 &lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="16" name="Closet" tags="PR" position="1331,358" size="100,100">&lt;p class=&quot;content&quot;&gt;The closet was full of my parents&#39; clothes. There didn&#39;t appear to be anything of note in there.
 
-&lt;&lt;if $playerCheckedDoor &amp; $playerCheckedKeyHolder&gt;&gt;
-	&lt;&lt;link &quot;I looked the house key in my dad&#39;s jackets.&quot;&gt;&gt;
-		
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $playerCheckedDoor &amp; $playerCheckedKeyHanger &amp; $dadsFavoriteJacketKnown&gt;&gt;
+	&lt;span id=&quot;closettext&quot;&gt;
+	&lt;&lt;link &quot;I looked for the house key in my dad&#39;s jackets.&quot;&gt;&gt;
+		&lt;&lt;set $playerHasKey = true&gt;&gt;
+		&lt;&lt;replace &quot;#closettext&quot;&gt;&gt;
+			I checked my dad&#39;s favorite jacket for the key, and there it was! Now I can go outside and try to spot Santa!
+		&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/link&gt;&gt;
+	&lt;/span&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="17" name="Your Room" tags="Room" position="940,16" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="17" name="Your Room" tags="Room" position="1053.3333333333333,57.66666666666667" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;p class=&quot;content&quot;&gt;I went back into my room. Nothing was out of the ordinary in there.
 
 [[I went back to bed.-&gt;sleep]]&lt;/p&gt;
-
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Dining Room" tags="Room" position="1465,73" size="100,100">Yum food
-
-&lt;&lt;display House-Map&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="sleep" tags="" position="841,208" size="100,100">&lt;p class=&quot;content&quot;&gt;You reason that if Santa is here, he would leave you something under the tree while you&#39;re asleep. Besides, you&#39;re tired. You climb into bed and [[drift off easy.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="20" name="Ending#3" tags="Ending" position="500,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;display House-Map&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="sleep" tags="" position="954.3333333333334,249.66666666666669" size="100,100">&lt;p class=&quot;content&quot;&gt;You reason that if Santa is here, he would leave you something under the tree while you&#39;re asleep. Besides, you&#39;re tired. You climb into bed and [[drift off easy.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="19" name="Ending#3" tags="Ending" position="500,216" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
-&lt;p class=&quot;content&quot;&gt;You wake up on Christmas day, and immediately rush to the tree to begin opening presents. You don&#39;t notice anything particularly magical, but your presents delight you nonetheless. You even got that toy you wanted so bad! This was a great Christmas.
+&lt;p class=&quot;content&quot;&gt;I woke up on Christmas day and immedeately ran to the living room to see if there were any new presents from Santa. I didn&#39;t find any presents that weren&#39;t there already, but the first one I opened was a new game for a console I didn&#39;t even have yet, so I knew it had to be in one of these presents! I started tearing all of them open, socks and toys and games alike until I finally found it! The newest Nintendo console! Wow! I was so grateful and excited and happy. Anyway, me and my parents kept opening our presents and laughing and then we had a great breakfast and I had an amazing Christmas with my parents.
 
-Would have been better if you met Santa, though.
+Would have been better if I had met Santa, though.
 
-[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="21" name="Wake them up" tags="" position="1030,558" size="100,100">&lt;p class=&quot;content&quot;&gt;You suddenly realize that you could be alone in the house with a stranger. What if it isn&#39;t Santa? What if it&#39;s a burglar, or worse? You panic and shake your parents awake.
+[[End]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="20" name="Wake them up" tags="" position="936.6666666666666,436.3333333333333" size="100,100">&lt;p class=&quot;content&quot;&gt;You suddenly realize that you could be alone in the house with a stranger. What if it isn&#39;t Santa? What if it&#39;s a burglar, or worse? You panic and shake your parents awake.
 They ask you what&#39;s wrong and why you woke them up.
 You tell them that you think there&#39;s someone in the house, and you can&#39;t sleep, and can they please check the house?
 One gives you a tight hug and helps you calm down, while the other checks the house. They come back and tell you that there&#39;s no one in the house, but you can sleep with them if it makes you feel safe.
 You nod. That would help a lot.
-[[You fall asleep in the warm embrace of your parents.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="22" name="Variables" tags="" position="2300,218" size="100,100">&lt;&lt;set $santaHasLeftTheBuilding = false&gt;&gt;
+[[You fall asleep in the warm embrace of your parents.-&gt;Ending#3]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="21" name="Variables" tags="" position="1826.6666666666665,168" size="100,100">&lt;&lt;set $santaHasLeftTheBuilding = false&gt;&gt;
 
 /* Time Keeping Variables */
 &lt;&lt;set $overallTimePassed = 0&gt;&gt;
@@ -454,9 +476,10 @@ You nod. That would help a lot.
 
 /* House Key Puzzle Flags */
 &lt;&lt;set $playerHasKey = false&gt;&gt;
+&lt;&lt;set $playerCheckedKeyHanger = false&gt;&gt;     /*Living Room*/
 &lt;&lt;set $playerCheckedDoor = false&gt;&gt; 			/*Living Room*/
 &lt;&lt;set $dadsFavoriteJacketKnown = false&gt;&gt; 	/*Kitchen*/
-&lt;&lt;set $jacketChances = 0&gt;&gt; 					/*Parents&#39; Bedroom*/</tw-passagedata><tw-passagedata pid="23" name="Stockings" tags="LR" position="363,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $jacketChances = 0&gt;&gt; 					/*Parents&#39; Bedroom*/</tw-passagedata><tw-passagedata pid="22" name="Stockings" tags="LR" position="363,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;span id=&quot;DisplayText&quot;&gt;
 &lt;&lt;if $chairMoved&gt;&gt;
 	You stand on a chair to get a better look into the stockings.
@@ -482,7 +505,7 @@ You nod. That would help a lot.
 	&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;/span&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="24" name="Shake" tags="" position="656,981" size="100,100">You pick up one of the presents and shake it. 
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="23" name="Shake" tags="" position="656,981" size="100,100">You pick up one of the presents and shake it. 
 &lt;&lt;switch random(1,3)&gt;&gt;
 	&lt;&lt;case 1&gt;&gt;
 		It doesn&#39;t make much noise. Probably socks. Ugh. 
@@ -490,7 +513,7 @@ You nod. That would help a lot.
 		The box jingles a bit. Probably a new toy!
 	&lt;&lt;case 3&gt;&gt;
 		The box is small and thin. It looks like it might be a new video game!
-&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Open" tags="" position="759,981" size="100,100">You pick up one of the presents and open it. 
+&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Open" tags="" position="759,981" size="100,100">You pick up one of the presents and open it. 
 &lt;&lt;switch random(1,3)&gt;&gt;
 	&lt;&lt;case 1&gt;&gt;
 		Oh man they&#39;re just socks. 
@@ -498,19 +521,19 @@ You nod. That would help a lot.
 		Hey its a new toy! YAY!
 	&lt;&lt;case 3&gt;&gt;
 		Oh cool its a new video game! I can&#39;t wait to play this!
-	&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Count" tags="" position="863,981" size="100,100">&lt;&lt;if $newPresentsPlaced&gt;&gt;
-	&lt;&lt;if !$foundNewPresentsPlaced&gt;&gt;
-		&lt;&lt;set $foundNewPresentsPlaced = true&gt;&gt;
+	&lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Count" tags="" position="863,981" size="100,100">&lt;&lt;if $newPresentsPlaced&gt;&gt;
+	&lt;&lt;if !$foundNewPresents&gt;&gt;
+		&lt;&lt;set $foundNewPresents = true&gt;&gt;
 		After taking some time to count all of the presents addressed to you, you find that there are three new presents to you under the tree, all from Santa. He must&#39;ve just placed these here.
 	&lt;&lt;else&gt;&gt; 
 		There appear to be no more new presents from Santa.
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
 	After taking some time to count all of the presents addressed to you, you find that there are not any new presents to you under the tree. Maybe Santa just hasn&#39;t gotten to place them yet?
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Door" tags="LR" position="963,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Door" tags="LR" position="963,781" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $playerHasKey&gt;&gt;
 	The door unlocks.
-	[[Go Outside-&gt;Ending#2]]
+	[[Go Outside-&gt;Outside]]
 &lt;&lt;else&gt;&gt;
 	&lt;&lt;set $playerCheckedDoor = true&gt;&gt;
 	&lt;span id=&quot;DisplayText&quot;&gt;
@@ -532,7 +555,7 @@ You nod. That would help a lot.
 	&lt;&lt;return&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
-&lt;/p&gt;</tw-passagedata><tw-passagedata pid="28" name="Outside" tags="" position="1061,981" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Snack" tags="K" position="1231,728" size="100,100">&lt;p class=&quot;content&quot;&gt;I opened the fridge and grabbed out &lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
+&lt;/p&gt;</tw-passagedata><tw-passagedata pid="27" name="Snack" tags="K" position="1231,728" size="100,100">&lt;p class=&quot;content&quot;&gt;I opened the fridge and grabbed out &lt;span id=&quot;Food&quot;&gt;...&lt;/span&gt;
 &lt;span id=&quot;FoodChoice&quot;&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Sandwich&quot;&gt;&gt;
@@ -553,44 +576,67 @@ You nod. That would help a lot.
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;/span&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="30" name="Photos" tags="K" position="1431,728" size="100,100">&lt;p class=&quot;content&quot;&gt;You look at the photos on the fridge and see &lt;span id=&quot;Action&quot;&gt;...&lt;/span&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="28" name="Photos" tags="K" position="1431,728" size="100,100">&lt;p class=&quot;content&quot;&gt;I looked at the photos on the fridge and saw&lt;span id=&quot;Action&quot;&gt;...&lt;/span&gt;
 &lt;span id=&quot;ActionChoice&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Soccer&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#Action&quot;&gt;&gt;you playing soccer.&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;replace &quot;#Action&quot;&gt;&gt; pictures of myself playing soccer. There&#39;s a picture of me on my dad&#39;s shoulders holding a trophy from when my team won! (I was the best on the team, of course.) 
+	&lt;&lt;nobr&gt;&gt;
+		&lt;&lt;if !$dadsFavoriteJacketKnown&gt;&gt;
+			&lt;span id=&quot;LookCloser&quot;&gt;
+				&lt;&lt;link &quot;I looked closer.&quot;&gt;&gt;
+					&lt;&lt;set $dadsFavoriteJacketKnown = true&gt;&gt;
+					&lt;&lt;replace &quot;#LookCloser&quot;&gt;&gt;I noticed that my dad was always wearing the same jacket in the pictures. Huh, that&#39;s kinda funny!&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;/link&gt;&gt;
+			&lt;/span&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;remove &quot;#ActionChoice&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Drawings&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#Action&quot;&gt;&gt;some of your drawings you did in school before winter break.&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;replace &quot;#Action&quot;&gt;&gt; some of the drawings I did in school before Christmas break. On one of them we had to trace a photo of our family, which was very difficult but very fun and I did really good! 
+	&lt;&lt;nobr&gt;&gt;
+		&lt;&lt;if !$dadsFavoriteJacketKnown&gt;&gt;
+			&lt;span id=&quot;LookCloser&quot;&gt;
+				&lt;&lt;link &quot;I looked closer.&quot;&gt;&gt;
+					&lt;&lt;set $dadsFavoriteJacketKnown = true&gt;&gt;
+					&lt;&lt;replace &quot;#LookCloser&quot;&gt;&gt;I noticed that my dad was always wearing the same jacket in the pictures. Huh, that&#39;s kinda funny!&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;/link&gt;&gt;
+			&lt;/span&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;/nobr&gt;&gt;
+	&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;remove &quot;#ActionChoice&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;link &quot;Music&quot;&gt;&gt;
-	&lt;&lt;replace &quot;#Action&quot;&gt;&gt;you playing with the music toys your parents got you for your birthday.&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;replace &quot;#Action&quot;&gt;&gt; pictures of me playing with some music toys I got for my third birthday. There&#39;s a picture of my dad playing his guitar with me on his knee playing with a toy flute. I was so tiny back then! 
+	&lt;&lt;nobr&gt;&gt;
+		&lt;&lt;if !$dadsFavoriteJacketKnown&gt;&gt;
+			&lt;span id=&quot;LookCloser&quot;&gt;
+				&lt;&lt;link &quot;I looked closer.&quot;&gt;&gt;
+					&lt;&lt;set $dadsFavoriteJacketKnown = true&gt;&gt;
+					&lt;&lt;replace &quot;#LookCloser&quot;&gt;&gt;I noticed that my dad was always wearing the same jacket in the pictures. Huh, that&#39;s kinda funny!&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;/link&gt;&gt;
+			&lt;/span&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;remove &quot;#ActionChoice&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;&lt;/span&gt;
 
-&lt;&lt;nobr&gt;&gt;
-&lt;&lt;if !$dadsFavoriteJacketKnown&gt;&gt;
-&lt;span id=&quot;LookCloser&quot;&gt;
-	&lt;&lt;link &quot;Look Closer&quot;&gt;&gt;
-		&lt;&lt;set $dadsFavoriteJacketKnown = true&gt;&gt;
-		&lt;&lt;replace &quot;#LookCloser&quot;&gt;&gt;You see that in each picture your dad is wearing the same jacket. Huh, that&#39;s kinda funny!&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;/link&gt;&gt;
-&lt;/span&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
 
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="31" name="Puddle" tags="K" position="1831,728" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="29" name="Puddle" tags="K" position="1831,728" size="100,100">&lt;p class=&quot;content&quot;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;span id=DisplayText&gt;
-&lt;&lt;if $foundWaterPuddle&gt;&gt;
+&lt;&lt;if $foundPuddleWater&gt;&gt;
 	The puddles on the ground appeared to be water, not dog pee like I thought originally.
 &lt;&lt;else&gt;&gt;
 	It looked like my dog had peed itself on the kitchen floor again. Gross. &lt;&lt;link &quot;However, it didn&#39;t smell like pee.&quot;&gt;&gt;
-	&lt;&lt;set $foundWaterPuddle = true&gt;&gt;
+	&lt;&lt;set $foundPuddleWater = true&gt;&gt;
 	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
 		I looked closer at the puddles on the ground and it actually appeared to be water. 
 	&lt;&lt;/replace&gt;&gt;
@@ -604,12 +650,12 @@ You nod. That would help a lot.
 	&lt;&lt;set $puddleCleaned = true&gt;&gt;
 	&lt;&lt;replace &quot;#DisplayText&quot;&gt;&gt;
 		I cleaned up the puddles.
-		&lt;&lt;if $foundWaterPuddle&gt;&gt;
+		&lt;&lt;if $foundPuddleWater&gt;&gt;
 			&lt;&lt;replace &quot;#DisplayText2&quot;&gt;&gt;
 				Since it is just water, I just wiped it up with some paper towels I got off of the counter. 
 			&lt;&lt;/replace&gt;&gt;
 		&lt;&lt;else&gt;&gt;
-			&lt;&lt;set $foundWaterPuddle = true&gt;&gt;
+			&lt;&lt;set $foundPuddleWater = true&gt;&gt;
 			&lt;&lt;replace &quot;#DisplayText2&quot;&gt;&gt;
 				It was super gross cleaning up the puddles, but as I wiped it up, I realized that it wasn&#39;t pee, but rather just puddles of cold water.
 			&lt;&lt;/replace&gt;&gt;
@@ -618,7 +664,7 @@ You nod. That would help a lot.
 &lt;&lt;/link&gt;&gt;
 &lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="32" name="Cookies Eaten" tags="" position="1567,931" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;return&gt;&gt;&lt;/p&gt;</tw-passagedata><tw-passagedata pid="30" name="Cookies Eaten" tags="" position="1567,931" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $santaAteCookies&gt;&gt;
 	SANTA ATE THE COOKIES AND MILK!!!!
 &lt;&lt;else&gt;&gt;
@@ -635,22 +681,23 @@ You nod. That would help a lot.
 		&lt;&lt;display &quot;Cookies Not Eaten&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt; 
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Cookies Not Eaten" tags="" position="1690,931" size="100,100">&lt;&lt;link &quot;Eat the cookies?&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="31" name="Cookies Not Eaten" tags="" position="1690,931" size="100,100">&lt;&lt;link &quot;Eat the cookies?&quot;&gt;&gt;
 	&lt;&lt;set $cookiesEaten = true&gt;&gt;
 	&lt;&lt;set $playerAteCookies = true&gt;&gt;
 	&lt;&lt;replace &quot;#CookieStatus&quot;&gt;&gt;
 		&lt;&lt;display &quot;Cookies Eaten&quot;&gt;&gt;
 	&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Intro#3a" tags="" position="28,513" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="32" name="Intro#3a" tags="" position="28,513" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
-&lt;p class=&quot;content&quot;&gt;Actually, I noticed that there was no smell to the spots so I tried touching the wet spots and I realized that they were actually cold, and there were even a few snowflakes still! Someone might have tracked it in recently. [[It had to be Santa!-&gt;Intro#3b]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="35" name="Intro#3b" tags="" position="28,638" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
+&lt;&lt;set $foundPuddleWater = true&gt;&gt;
+&lt;p class=&quot;content&quot;&gt;Actually, I noticed that there was no smell to the spots so I tried touching the wet spots and I realized that they were actually cold, and there were even a few snowflakes still! Someone might have tracked it in recently. [[It had to be Santa!-&gt;Intro#3b]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="33" name="Intro#3b" tags="" position="28,638" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;parentsroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;myroom&quot;&gt;&gt;
 &lt;&lt;removeclass &quot;html&quot; &quot;kitchen&quot;&gt;&gt;
 &lt;&lt;addclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
-&lt;p class=&quot;content&quot;&gt;I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had also noticed some weird wet spots in the kitchen, which turned out to be snow! I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Hallway]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="36" name="Timer Testing" tags="" position="2299,434" size="100,100">&lt;&lt;set $timer = 0&gt;&gt; /* measured in minutes */
+&lt;p class=&quot;content&quot;&gt;I went into the living room with the tree and the stockings and everything and I started looking over my presents, but they were all addressed from my parents so I figured Santa wasn’t able to visit yet, but I had also noticed some weird wet spots in the kitchen, which turned out to be snow! I kept looking over the presents and the tree and everything, but I couldn’t find anything, but by [[then I was determined to find Santa.-&gt;Hallway]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="34" name="Timer Testing" tags="" position="1825.6666666666665,384" size="100,100">&lt;&lt;set $timer = 0&gt;&gt; /* measured in minutes */
 
 Time Passed = &lt;span id= &quot;time&quot;&gt;&lt;&lt;- $timer&gt;&gt;&lt;/span&gt;
 
@@ -677,10 +724,17 @@ Time Passed = &lt;span id= &quot;time&quot;&gt;&lt;&lt;- $timer&gt;&gt;&lt;/span
 &lt;&lt;link &quot;Advance Time by 60&quot;&gt;&gt;
 	&lt;&lt;set $timer = $timer + 60&gt;&gt;
 	&lt;&lt;replace &quot;#time&quot;&gt;&gt; &lt;&lt;- $timer&gt;&gt; &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Hallway" tags="" position="226,515" size="100,100">&lt;p class=&quot;content&quot;&gt;I stood in the hallway, wondering where in the house I should go next.&lt;/p&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Hallway" tags="" position="226,515" size="100,100">&lt;p class=&quot;content&quot;&gt;I stood in the hallway, wondering where in the house I should go next.&lt;/p&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;display House-Map&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata></tw-storydata></div>
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Outside" tags="" position="913.3333333333334,613.3333333333335" size="100,100">&lt;&lt;removeclass &quot;html&quot; &quot;livingroom&quot;&gt;&gt;
+&lt;&lt;addclass &quot;html&quot; &quot;outside&quot;&gt;&gt;
+&lt;&lt;if $foundStockingsFilled &amp; $foundNewPresents &amp; $foundFireplaceFootprints &amp; $foundPuddleWater $foundCookiesEatenBySanta&gt;&gt;
+	I finally could prove Santa&#39;s existence. I knew he was real. I grabbed my coat and boots from by the door and ran out [[into the snow.-&gt;Ending#2]]
+&lt;&lt;else&gt;&gt;
+	I went outside, but I couldn&#39;t see Santa. Maybe I had missed him? Or maybe I just needed to keep looking inside the house for evidence?
+[[I went back inside to keep looking.-&gt;Living Room]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="\\s"===e?"\\S":e.replace(/^\[/,"[^"),r="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",n=r.replace("\\-",""),a=function(){return"("+r+"+)\\(([^\\)\\|\\n]+)\\):|("+r+"+):([^;\\|\\n]+);|((?:\\."+r+"+)+);|((?:#"+r+"+)+);"}();return Object.freeze({space:e,spaceNoTerminator:"[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:t,anyLetter:r,anyLetterStrict:n,identifierFirstChar:"[$A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:a,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){!function(e){if(e&&e.prototype&&null==e.prototype.firstElementChild){var t=Node.ELEMENT_NODE;Object.defineProperty(e.prototype,"firstElementChild",{get:function(){for(var e=this.childNodes,r=0;r<e.length;++r){var n=e[r];if(n.nodeType===t)return n}return null}})}}(window.Node||window.Element)}(),function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Windows:t||e.includes("iemobile"),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=e&&function(){try{var e=document.createElement("audio").play();return e.catch(function(){}),e instanceof Promise}catch(e){}return!1}(),r=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),n=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),a=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),i=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}();return Object.freeze({audio:e,audioPromise:t,fileAPI:r,geolocation:n,mutationObserver:a,performance:i})}(),Visibility=function(){function e(){return Boolean(r&&document[r.hiddenProperty])}function t(){return r&&document[r.stateProperty]||"visible"}var r=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return null}();return Object.freeze(Object.defineProperties({},{isHidden:{value:e},state:{value:t},hiddenProperty:{value:r.hiddenProperty},stateProperty:{value:r.stateProperty},changeEvent:{value:r.changeEvent}}))}(),_ref3=function(){function e(t){if("object"!==(void 0===t?"undefined":_typeof(t))||null===t)return t;if(t instanceof String)return String(t);if(t instanceof Number)return Number(t);if(t instanceof Boolean)return Boolean(t);if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return t instanceof Array?r=new Array(t.length):t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){return r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){return r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){switch(n.nodeName.toUpperCase()){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===(void 0===e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){var n=jQuery(document.createElement("div")),a=jQuery(document.createElement("button")),i=jQuery(document.createElement("pre")),o=L10n.get("errorTitle")+": "+(t||"unknown error");return a.addClass("error-toggle").ariaClick({label:L10n.get("errorToggle")},function(){a.hasClass("enabled")?(a.removeClass("enabled"),i.attr({"aria-hidden":!0,hidden:"hidden"})):(a.addClass("enabled"),i.removeAttr("aria-hidden hidden"))}).appendTo(n),jQuery(document.createElement("span")).addClass("error").text(o).appendTo(n),jQuery(document.createElement("code")).text(r).appendTo(i),i.addClass("error-source").attr({"aria-hidden":!0,hidden:"hidden"}).appendTo(n),n.addClass("error-view").appendTo(e),console.warn(o+"\n\t"+r.replace(/\n/g,"\n\t")),!1}function i(e,t){var r=i;switch(void 0===e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){return"{ "+[].concat(_toConsumableArray(e)).map(function(e){var n=_slicedToArray(e,2),a=n[0],i=n[1];return r(a,t)+" → "+r(i,t)}).join(", ")+" }"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref3.clone,convertBreaks=_ref3.convertBreaks,safeActiveElement=_ref3.safeActiveElement,setPageElement=_ref3.setPageElement,throwError=_ref3.throwError,toStringOrDefault=_ref3.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.ariaIsDisabled()||(t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments))}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this},ariaDisabled:function(e){if(0===this.length||0===arguments.length)return this;var t=this.not("button,fieldset,input,menuitem,optgroup,option,select,textarea"),r=this.filter("button,fieldset,input,menuitem,optgroup,option,select,textarea");return e?(t.each(function(){this.setAttribute("disabled",""),this.setAttribute("aria-disabled","")}),r.each(function(){this.disabled=!0,this.setAttribute("aria-disabled","")})):(t.each(function(){this.removeAttribute("disabled"),this.removeAttribute("aria-disabled")}),r.each(function(){this.disabled=!1,this.removeAttribute("aria-disabled")})),this},ariaIsDisabled:function(){return this.is("[disabled]")}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(errorPrologRegExp,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this
